@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>صفحه Loading Animation</title>
+<style>
+  body {
+    font-family: Tahoma, sans-serif;
+    padding: 20px;
+    background: #f0f0f0;
+    direction: rtl;
+    text-align: center;
+  }
+  #loading {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+  }
+  .spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #007bff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<h2>نمونه صفحه Loading Animation</h2>
+<button onclick="showLoading()">نمایش لودینگ</button>
+
+<div id="loading">
+  <div class="spinner"></div>
+</div>
+
+<script>
+  const loading = document.getElementById('loading');
+  function showLoading() {
+    loading.style.display = 'flex';
+    setTimeout(() => {
+      loading.style.display = 'none';
+    }, 3000);
+  }
+</script>
+
+</body>
+</html>

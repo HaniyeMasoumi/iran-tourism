@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>صفحه Scroll to Top</title>
+<style>
+  body {
+    font-family: Tahoma, sans-serif;
+    padding: 20px;
+    background: #f9f9f9;
+    direction: rtl;
+    height: 2000px; /* برای نمایش اسکرول */
+  }
+  #scrollTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    display: none;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  }
+  #scrollTopBtn:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<h2>نمونه صفحه Scroll to Top</h2>
+<p>صفحه بلند با اسکرول زیاد برای تست دکمه اسکرول به بالا</p>
+
+<button id="scrollTopBtn" title="بازگشت به بالا">&#8593;</button>
+
+<script>
+  const scrollBtn = document.getElementById('scrollTopBtn');
+  window.onscroll = () => {
+    if(document.documentElement.scrollTop > 200){
+      scrollBtn.style.display = 'block';
+    } else {
+      scrollBtn.style.display = 'none';
+    }
+  };
+  scrollBtn.onclick = () => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  };
+</script>
+
+</body>
+</html>

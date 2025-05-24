@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>وضعیت رزرو ها </title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Vazir&display=swap');
+  body {
+    background: #eaf6fb;
+    font-family: 'Vazir', Tahoma, sans-serif;
+    min-height: 100vh;
+    color: #2c3e50;
+  }
+  
+  main.container {
+    max-width: 960px;
+  }
+  .cart-header {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+    color: #34495e;
+    border-bottom: 2px solid #3a86ff;
+    padding-bottom: 6px;
+    user-select: none;
+  }
+  .cart-item {
+    background: white;
+    border-radius: 15px;
+    padding: 24px 28px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 19px rgb(58 134 255 / 0.12);
+    transition: box-shadow 0.3s ease;
+    user-select: none;
+  }
+  .cart-item:hover {
+    box-shadow: 0 6px 28px rgb(58 134 255 / 0.25);
+  }
+  .item-name {
+    font-weight: 900;
+    font-size: 1.45rem;
+    margin-bottom: 6px;
+    color: #1e2d46;
+  }
+  .item-description {
+    font-size: 1rem;
+    color: #67718e;
+    margin-bottom: 22px;
+    user-select: text;
+  }
+  label.form-label {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #34495e;
+  }
+  select.form-select,
+  input.form-control {
+    border-radius: 12px;
+    border: 1.5px solid #cbd5e1;
+    transition: border-color 0.3s ease;
+    font-weight: 600;
+    color: #34495e;
+    box-shadow: none;
+    padding: 8px 12px;
+    text-align: center;
+    min-width: 140px;
+    max-width: 160px;
+  }
+  select.form-select:focus,
+  input.form-control:focus {
+    border-color: #3a86ff;
+    box-shadow: 0 0 6px rgb(58 134 255 / 0.38);
+    outline: none;
+  }
+  .unit-price, .item-total-price {
+    font-weight: 900;
+    color: #3a86ff;
+    font-size: 1.25rem;
+  }
+  .bottom-row {
+    margin-top: 28px;
+  }
+  .btn-remove {
+    color: #e74c3c;
+    cursor: pointer;
+    font-weight: 700;
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-size: 1.12rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.24s ease;
+    user-select: none;
+  }
+  .btn-remove:hover {
+    color: #c0392b;
+    text-decoration: none;
+  }
+  .btn-remove i {
+    font-size: 1.3rem;
+  }
+  .total-section {
+    background: white;
+    border-radius: 18px;
+    padding: 28px 32px;
+    box-shadow: 0 5px 24px rgb(58 134 255 / 0.18);
+    text-align: left;
+    user-select: none;
+  }
+  .total-label {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #34495e;
+  }
+  .total-price {
+    font-weight: 900;
+    font-size: 2.1rem;
+    color: #3a86ff;
+  }
+  .btn-primary {
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 1.15rem;
+    padding: 14px 40px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 20px rgb(58 134 255 / 0.36);
+    user-select: none;
+  }
+  .btn-primary:hover {
+    background-color: #335edf;
+    box-shadow: 0 6px 28px rgb(50 88 186 / 0.6);
+  }
+  @media(max-width: 575px) {
+    main.container {
+      max-width: 100%;
+      padding: 0 12px;
+    }
+    .cart-item {
+      padding: 18px 16px;
+    }
+    .item-name {
+      font-size: 1.25rem;
+    }
+    label.form-label {
+      font-size: 0.9rem;
+    }
+    .unit-price, .item-total-price {
+      font-size: 1.15rem;
+    }
+    .total-label {
+      font-size: 1.25rem;
+    }
+    .total-price {
+      font-size: 1.65rem;
+    }
+    .btn-primary {
+      font-size: 1rem;
+      padding: 12px 30px;
+      width: 100%;
+      box-shadow: none;
+    }
+    .bottom-row {
+      margin-top: 20px;
+      justify-content: space-between !important;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/Logo.png" alt="لوگو">
+            </a>
+        </div>
+        <div>
+            <h1>سایت گردشگری ایران</h1>
+            <p>سفر به سرزمین تاریخ، فرهنگ و طبیعت</p>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fs-5 shadow-sm" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">ایرانگردی</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="نمایش منو">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">خانه</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">ورود</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">ثبت‌نام</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about_us.html">درباره ما</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact_us.html">تماس با ما</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">وبلاگ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="img/Iran.svg">نقشه</a></li>
+                    <li class="nav-item"><a class="nav-link" href="qom.html">فیلتر</a></li>
+                    <li class="nav-item"><a class="nav-link" href="qom.html">جست‌وجو</a></li>
+                    <li class="nav-item"><a class="nav-link" href="journal.html">ژورنال سفر</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <div class="container">
+  </div>
+
+<main class="container" role="main" aria-label="سبد خرید">
+<p> </p>
+  <h2 class="cart-header">موارد رزرو شده</h2>
+
+  <section id="cart-items" aria-live="polite">
+    <article class="cart-item" data-item-id="1" aria-label="رزرو اتاق هتل خورشید قم">
+  <h3 class="item-name">هتل خورشید قم</h3>
+  <div class="unit-price" id="unit-price-1" data-vip="1800000" data-normal="1200000" aria-live="polite" aria-atomic="true">1,200,000 تومان</div>
+  <p class="item-description">رزرو اتاق در هتل ۴ ستاره واقع در قم</p>
+  <div class="row align-items-center gy-3">
+    <div class="col-12 col-md-3">
+      <label for="room-type-1" class="form-label">نوع اتاق</label>
+      <select id="room-type-1" class="form-select select-input" aria-describedby="desc-room-type-1">
+        <option value="vip" data-price="1800000">VIP</option>
+        <option value="normal" data-price="1200000" selected>معمولی</option>
+      </select>
+      <small id="desc-room-type-1" class="text-muted">انتخاب نوع اتاق</small>
+    </div>
+    <div class="col-12 col-md-3">
+      <label for="room-count-1" class="form-label">تعداد اتاق‌ها</label>
+      <input type="number" id="room-count-1" class="form-control number-input" min="1" value="1" aria-describedby="desc-room-count-1" />
+      <small id="desc-room-count-1" class="text-muted">تعداد اتاق رزرو شده</small>
+    </div>
+    <div class="col-12 col-md-3">
+      <label for="bed-count-1" class="form-label">تعداد تخت‌ها</label>
+      <input type="number" id="bed-count-1" class="form-control number-input" min="1" value="1" aria-describedby="desc-bed-count-1" />
+      <small id="desc-bed-count-1" class="text-muted">مجموع تعداد تخت</small>
+    </div>
+    <div class="col-12 col-md-3">
+      <label for="stay-duration-1" class="form-label">مدت اقامت (شب)</label>
+      <input type="number" id="stay-duration-1" class="form-control number-input" min="1" value="1" aria-describedby="desc-stay-duration-1" />
+      <small id="desc-stay-duration-1" class="text-muted">تعداد شب‌های اقامت</small>
+    </div>
+  </div>
+  <div class="row align-items-center gy-3 bottom-row">
+    <div class="col-12 col-md-9 text-end">
+      <div class="item-total-price" id="item-total-price-1" aria-live="polite" aria-atomic="true">1,200,000 تومان</div>
+    </div>
+    <div class="col-12 col-md-3 text-center">
+      <button type="button" class="btn-remove" title="حذف" aria-label="حذف آیتم">
+        <i class="bi bi-trash-fill" aria-hidden="true"></i> حذف
+      </button>
+    </div>
+  </div>
+    </article>
+  </section>
+
+  <section class="total-section mt-4" aria-label="جمع کل سبد خرید">
+    <div class="d-flex justify-content-between align-items-center mx-2">
+      <div class="total-label">مبلغ کل:</div>
+      <div class="total-price" id="cart-total-price" aria-live="polite" aria-atomic="true">1,200,000 تومان</div>
+    </div>
+    <div class="text-start mt-4">
+      <a href="payment.html" class="btn btn-primary">
+        <button class="btn btn-primary btn-lg px-5" aria-label="ادامه فرآیند پرداخت">ادامه فرآیند پرداخت</button></a>
+    </div>
+  </section>
+
+</main>
+   <footer class="text-center mt-5">
+        <p>لینک‌های مهم:</p>
+        <a href="index.html">صفحه اصلی</a>
+        <a href="login.html">ورود</a>
+        <a href="register.html">ثبت‌ نام</a>
+        <a href="blog.html">وبلاگ</a>
+        <a href="about_us.html">درباره ما</a>
+        <a href="contact_us.html">تماس با ما</a>
+    </footer>
+<script>
+  function formatNumber(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+  function toPersianDigits(str) {
+    const persianDigits = "۰۱۲۳۴۵۶۷۸۹";
+    return str.replace(/\d/g, d => persianDigits[d]);
+  }
+  function formatCurrency(num) {
+    return toPersianDigits(formatNumber(num)) + " تومان";
+  }
+  function updateItemPrice(item) {
+    const selectRoomType = item.querySelector('.select-input');
+    const inputRoomCount = item.querySelector('#room-count-1');
+    const inputBedCount = item.querySelector('#bed-count-1');
+    const unitPriceElem = item.querySelector('#unit-price-1');
+    const itemTotalPriceElem = item.querySelector('#item-total-price-1');
+
+    let selectedOption = selectRoomType.options[selectRoomType.selectedIndex];
+    let unitPrice = parseInt(selectedOption.getAttribute('data-price'), 10);
+    let roomCount = Math.max(1, parseInt(inputRoomCount.value, 10) || 1);
+    let bedCount = Math.max(1, parseInt(inputBedCount.value, 10) || 1);
+
+    unitPriceElem.innerText = formatCurrency(unitPrice);
+
+    let totalPrice = unitPrice * roomCount;
+    itemTotalPriceElem.innerText = formatCurrency(totalPrice);
+
+    return totalPrice;
+  }
+  function updateCartTotal() {
+    let total = 0;
+    document.querySelectorAll('.cart-item').forEach(item => {
+      total += updateItemPrice(item);
+    });
+    document.getElementById('cart-total-price').innerText = formatCurrency(total);
+  }
+  function setupEventListeners() {
+    document.querySelectorAll('.select-input').forEach(select => {
+      select.addEventListener('change', e => {
+        updateCartTotal();
+      });
+    });
+    document.querySelectorAll('.number-input').forEach(input => {
+      input.addEventListener('input', e => {
+        let val = e.target.value;
+        if(val === '' || val < 1){
+          e.target.value = 1;
+        }
+        updateCartTotal();
+      });
+    });
+    document.querySelectorAll('.btn-remove').forEach(button => {
+      button.addEventListener('click', e => {
+        const item = e.target.closest('.cart-item');
+        item.remove();
+        updateCartTotal();
+        if(document.querySelectorAll('.cart-item').length === 0) {
+          document.getElementById('cart-items').innerHTML = '<p class="text-center fs-5 text-muted mt-3">سبد خرید شما خالی است.</p>';
+          document.getElementById('cart-total-price').innerText = formatCurrency(0);
+        }
+      });
+    });
+  }
+  updateCartTotal();
+  setupEventListeners();
+</script>
+<script>
+function updateItemPrice(item) {
+  const selectRoomType = item.querySelector('.select-input');
+  const inputRoomCount = item.querySelector('#room-count-1');
+  const inputStayDuration = item.querySelector('#stay-duration-1');
+  const unitPriceElem = item.querySelector('#unit-price-1');
+  const itemTotalPriceElem = item.querySelector('#item-total-price-1');
+  let selectedOption = selectRoomType.options[selectRoomType.selectedIndex];
+  let unitPrice = parseInt(selectedOption.getAttribute('data-price'), 10);
+  let roomCount = Math.max(1, parseInt(inputRoomCount.value, 10) || 1);
+  let stayDuration = Math.max(1, parseInt(inputStayDuration.value, 10) || 1);
+  unitPriceElem.innerText = formatCurrency(unitPrice);
+  let totalPrice = unitPrice * roomCount * stayDuration;
+  itemTotalPriceElem.innerText = formatCurrency(totalPrice);
+  return totalPrice;
+}</script>
+<script>
+document.querySelectorAll('.number-input').forEach(input => {
+  input.addEventListener('input', e => {
+    let val = e.target.value;
+    if(val === '' || val < 1){
+      e.target.value = 1;
+    }
+    updateCartTotal();
+  });
+});</script>
+</body>
+</html>

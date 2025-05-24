@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>نمونه Toast</title>
+<style>
+  body {
+    font-family: Tahoma, sans-serif;
+    padding: 20px;
+    background: #f0f0f0;
+    direction: rtl;
+  }
+  #toastContainer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+  .toast {
+    background: #333;
+    color: #fff;
+    padding: 12px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    opacity: 0.9;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: opacity 0.5s ease;
+  }
+  button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<h2>نمونه صفحه Toast</h2>
+<button onclick="showToast('این یک پیام Toast است!')">نمایش Toast</button>
+
+<div id="toastContainer"></div>
+
+<script>
+  const toastContainer = document.getElementById('toastContainer');
+  function showToast(message, duration = 3000) {
+    const toast = document.createElement('div');
+    toast.classList.add('toast');
+    toast.textContent = message;
+    toastContainer.appendChild(toast);
+    setTimeout(() => {
+      toast.style.opacity = '0';
+      setTimeout(() => toast.remove(), 500);
+    }, duration);
+  }
+</script>
+
+</body>
+</html>

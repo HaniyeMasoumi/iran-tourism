@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ثبت‌ نام</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/Logo.png" alt="لوگو">
+      </a>
+    </div>
+    <div>
+      <h1>سایت گردشگری ایران</h1>
+      <p>سفر به سرزمین تاریخ، فرهنگ و طبیعت</p>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fs-5 shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">ایرانگردی</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="نمایش منو">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">خانه</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">ورود</a></li>
+          <li class="nav-item"><a class="nav-link" href="register.html">ثبت‌نام</a></li>
+          <li class="nav-item"><a class="nav-link" href="about_us.html">درباره ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact_us.html">تماس با ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">وبلاگ</a></li>
+          <li class="nav-item"><a class="nav-link" href="img/Iran.svg">نقشه</a></li>
+          <li class="nav-item"><a class="nav-link" href="qom.html">فیلتر</a></li>
+          <li class="nav-item"><a class="nav-link" href="qom.html">جست‌وجو</a></li>
+          <li class="nav-item"><a class="nav-link" href="journal.html">ژورنال سفر</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card p-4 shadow-sm register-card">
+
+      <div class="text-center mb-3">
+        <img src="img/logo.png" alt="لوگو" class="logo-img">
+        <h2 class="text-center mb-4">ثبت نام</h2>
+
+      </div>
+
+
+
+
+      <form>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">نام</label>
+            <input type="text" class="form-control" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">نام خانوادگی</label>
+            <input type="text" class="form-control" required>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">شماره موبایل</label>
+          <input type="tel" class="form-control text-end" placeholder="مثلا 09120000000" required>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">رمز عبور</label>
+            <input type="password" class="form-control" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">تایید رمز عبور</label>
+            <input type="password" class="form-control" required>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">ایمیل</label>
+          <input type="email" class="form-control text-end" placeholder="example@email.com">
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">کد ملی</label>
+            <input type="text" class="form-control" maxlength="10" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">تاریخ تولد</label>
+            <input type="date" class="form-control" required>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">جنسیت</label>
+          <select class="form-select" required>
+            <option value="" disabled selected>انتخاب کنید</option>
+            <option>مرد</option>
+            <option>زن</option>
+            <option>دیگر</option>
+          </select>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">استان</label>
+            <input type="text" class="form-control" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">شهر</label>
+            <input type="text" class="form-control" required>
+          </div>
+        </div>
+
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn register-btn">ثبت‌نام</button>
+        </div>
+
+        <div class="text-center mt-3">
+          <span>قبلا ثبت‌نام کرده‌اید؟ <a href="login.html">وارد شوید</a></span>
+        </div>
+      </form>
+
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col">
+      <h5 class="fw-bold"></h5>
+      <p><i class="bi bi-geo-alt"></i></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>لینک‌های مهم:</p>
+    <a href="index.html">صفحه اصلی</a>
+    <a href="login.html">ورود</a>
+    <a href="register.html">ثبت‌ نام</a>
+    <a href="blog.html">وبلاگ</a>
+    <a href="about_us.html">درباره ما</a>
+    <a href="contact_us.html">تماس با ما</a>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
