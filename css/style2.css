@@ -1,10 +1,5 @@
-
-* {
-  font-family: 'Tahoma', sans-serif !important;
-}
-
 body {
-  background-color: #aae5f6;
+  background-color: #cce7ff;
 }
 
 .main-card {
@@ -57,7 +52,6 @@ body {
 }
 
 header h1 {
-
   font-size: 2.5rem;
   margin: 0;
   font-weight: bold;
@@ -71,20 +65,16 @@ header p {
   margin-left: 160px;
 }
 
-
 footer {
-  background-color: #f99338;
-  color: white;
   text-align: center;
-    font-size: 0.9rem;
-  padding: 60px 0 30px;
-  position: relative;
-  //clip-path: ellipse(75% 100% at 50% 100%);
+  padding:1rem 0;
+  background: #f99338;
+  color: #fff;
+  font-size: 0.9rem;
 }
 
 footer a {
   color: #fff;
-font-family: 'b nazanin', sans-serif;
   text-decoration: none;
   font-weight: bold;
   margin: 0 2px;
@@ -98,6 +88,12 @@ footer a:hover {
 
 
 
+.crossmark {
+      font-size: 55px;
+      margin-bottom: 20px;
+      color: #b00020;
+
+    }
 
 
 
@@ -152,7 +148,7 @@ footer a:hover {
 }
 
 body {
-  background-color: #aae5f6;
+  background-color: #cce7ff;
 }
 
 .logo-img {
@@ -218,8 +214,6 @@ body {
       left: 0;
       right: 0;
       margin: 0;
-            //z-index: 0;
-          //margin-top: -60px;
     }
 
     footer a {
@@ -238,13 +232,12 @@ body {
     }
 
 
+
  .footer-second {
       background-color: #f8f9fa;
       padding: 20px 0;
       border-top: 1px solid #ddd;
       border-bottom: 1px solid #ddd;
-            position: relative;
-         
     }
     .footer-second .container {
       display: flex;
@@ -255,7 +248,6 @@ body {
       margin-bottom: 15px;
     }
     .footer-second h5 {
-
       font-weight: bold;
       margin-bottom: 10px;
     }
@@ -333,30 +325,28 @@ body {
         .color-option.active {
             box-shadow: 0 0 0 2px #0d6efd;
         }
-/* Set the main image size */
+
     .product-gallery img {
       max-height: 400px;
       width: 100%;
       object-fit: cover;
     }
 
-    /* Thumbnail container */
+
     .product-gallery .thumbnails img {
       cursor: pointer;
-      transition: transform 0.3s ease;  /* Smooth hover effect */
-      width: 100%;   /* Ensure all thumbnails have the same width */
-      height: auto;  /* Maintain aspect ratio */
-      max-width: 80px; /* Set max width for thumbnails */
+      transition: transform 0.3s ease;
+      width: 100%;
+      height: auto;
+      max-width: 80px;
     }
 
-    /* Hover effect to slightly increase the size of thumbnails */
     .product-gallery .thumbnails img:hover {
       transform: scale(1.1);
     }
 
-    /* Optional: Add margin around thumbnails */
     .product-gallery .thumbnails .col-3 {
-      padding: 0; /* Remove default padding from columns */
+      padding: 0;
     }
 
 .btn-prim {
@@ -421,7 +411,6 @@ body {
 
         .star-rating label {
             color: #ddd;
-
             font-size: 24px;
             padding: 0 2px;
             cursor: pointer;
@@ -470,7 +459,6 @@ body {
         }
 
         .comment-box h3 {
-
             font-size: 1.8rem;
             margin-bottom: 20px;
         }
@@ -506,108 +494,14 @@ body {
 }
 
 .similar-places .card {
-    flex: 0 0 auto; /* Prevent cards from shrinking */
-    margin-right: 5px; /* Space between cards */
+    flex: 0 0 auto;
+    margin-right: 5px;
     width: 30rem;
-        height:7rem; /* Set a smaller width for the cards */
+        height:7rem;
 }
 
 .similar-places h5 {
-
-    font-size: 1rem; /* Adjust the font size of the title */
+    font-size: 1rem;
 }
   
 
-
-
-
-
-.content {
-    padding: 2rem;
-}
-
-.post {
-    margin-bottom: 2rem;
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.post h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #4CAF50;
-}
-
-.post img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-}
-
-.post p {
-    font-size: 1rem;
-    line-height: 1.8;
-}
-
-
-
-.post img {
-  width: 80%; /* عکس‌ها کوچیک‌تر */
-  display: block;
-  margin: 0 auto 10px; /* مرکز چین عکس و فاصله زیرش */
-}
-
-.post p {
-  text-align: justify; /* متن زیر عکس خواناتر بشه */
-  line-height: 1.8;
-}
-
-
-.visit-card {
-      border: none;
-      border-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-      padding: 20px;
-      background-color: #fff;
-    }
-    .story-icon {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #f99338;
-      margin-left: 15px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-    .story-icon:hover {
-      transform: scale(1.05);
-    }
-    .visit-header {
-      display: flex;
-      align-items: center;
-    }
-    .visit-title {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 0;
-    }
-
-
-.saved-story-box {
-  background-color: #ffffff;
-  border: 2px solid #f99338;
-  border-radius: 15px;
-  padding: 15px;
-  margin-top: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-}
-.saved-story-box small {
-  display: block;
-  margin-top: 5px;
-  color: #888;
-  font-size: 0.9em;
-}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>در حال بارگذاری...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(to top left, #fef9f6, #e3f2fd);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: sans-serif;
+    }
+
+    .loader-wrapper {
+      text-align: center;
+    }
+
+    .travel-loader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .travel-loader .circle {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      animation: bounce 0.6s infinite alternate;
+    }
+
+    .travel-loader .orange {
+      background-color: #f99338;
+      animation-delay: 0s;
+    }
+
+    .travel-loader .blue {
+      background-color: #6ec1e4;
+      animation-delay: 0.3s;
+    }
+
+    @keyframes bounce {
+      from {
+        transform: translateY(0);
+        opacity: 0.6;
+      }
+      to {
+        transform: translateY(-20px);
+        opacity: 1;
+      }
+    }
+
+    .loading-text {
+      color: #555;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="loader-wrapper">
+    <div class="travel-loader">
+      <div class="circle orange"></div>
+      <div class="circle blue"></div>
+      <div class="circle orange"></div>
+    </div>
+    <div class="loading-text">در حال بارگذاری، لطفاً صبر کنید...</div>
+  </div>
+</body>
+</html>

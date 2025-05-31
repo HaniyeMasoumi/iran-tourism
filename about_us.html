@@ -4,8 +4,60 @@
   <title>درباره ما</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="https://cdn.fontcdn.ir/Font/Persian/WebFonts/css/fontiran.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="css/style2.css" rel="stylesheet">
+<style>
+  body {
+      background: #cce7ff;
+    }
+  .crossmark {
+      font-size: 55px;
+      margin-bottom: 20px;
+      color: #b00020;
 
+    }
+    .faq-section {
+      max-width: 600px;
+      margin: 60px auto;
+      background: #e3f2fd;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .faq-section h3 {
+      color: #ff5722;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    label {
+      float: right;
+    }
+
+    .form-control {
+      text-align: right;
+    }
+button[type="submit"]:hover {
+  background-color: #005fa3 !important;
+}
+.hover-bounce:hover {
+  animation: bounce 1s;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0); 
+  }
+  40% {
+    transform: translateY(-10px); 
+  }
+  60% {
+    transform: translateY(-5px); 
+  }
+}
+</style>
 </head>
 <body>
 <header>
@@ -19,47 +71,98 @@
     <p>سفر به سرزمین تاریخ، فرهنگ و طبیعت</p>
   </div>
 </header>
-<nav class="navbar navbar-expand-lg navbar-light bg-light fs-5 shadow-sm">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">ایرانگردی</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="نمایش منو">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarMain">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="index.html">خانه</a></li>
-        <li class="nav-item"><a class="nav-link" href="login.html">ورود</a></li>
-        <li class="nav-item"><a class="nav-link" href="register.html">ثبت‌نام</a></li>
-        <li class="nav-item"><a class="nav-link" href="about_us.html">درباره ما</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact_us.html">تماس با ما</a></li>
-        <li class="nav-item"><a class="nav-link" href="blog.html">وبلاگ</a></li>
-        <li class="nav-item"><a class="nav-link" href="img/Iran.svg">نقشه</a></li>
-        <li class="nav-item"><a class="nav-link" href="qom.html">فیلتر</a></li>
-        <li class="nav-item"><a class="nav-link" href="qom.html">جست‌وجو</a></li>
-        <li class="nav-item"><a class="nav-link" href="journal.html">ژورنال سفر</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fs-5 shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">ایرانگردی</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="نمایش منو">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+  <a class="nav-link" href="index.html"><i class="bi bi-house"></i> خانه</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="search.html"><i class="bi bi-search"></i> جست‌وجو</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="blog.html"><i class="bi bi-file-richtext"></i> وبلاگ</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="about_us.html"><i class="bi bi-people"></i> درباره ما</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="contact_us.html"><i class="bi bi-telephone"></i> تماس با ما</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="journal.html"><i class="bi bi-pencil-square"></i> ژورنال سفر</a>
+</li>
+        </ul>
+
+<div class="d-flex">
+     <a href="register.html" class="btn btn-outline-primary ms-2">
+  <i class="bi bi-box-arrow-in-left me-1"></i> ورود | ثبت نام
+</a>
+      </div>
+      </div>
+    </div>
+  </nav>
+
+<br>
 <div class="container d-flex justify-content-center align-items-center min-vh-100">
   <div class="card about-card shadow-sm p-4 text-center">
     <div class="text-center mb-3">
       <img src="img/logo.png" alt="لوگو" class="logo-img mb-3">
-      <h2 class="mb-3">درباره ما</h2>
+      <h4 class="mb-3">درباره ما</h4>
     </div>
-    <p style="text-align: justify;">سامانه گردشگری ما با هدف معرفی زیبایی‌ها، جاذبه‌های طبیعی، تاریخی و فرهنگی ایران راه‌اندازی شده است.
-      ما تلاش می‌کنیم بستری هوشمند، ساده و کاربردی برای کاربران فراهم کنیم تا بتوانند اطلاعات کاملی از مقاصد گردشگری در سراسر کشور به‌دست آورند، سفرهای خود را بهتر برنامه‌ریزی کنند و تجربه‌ای لذت‌بخش از ایران‌گردی داشته باشند.
-      با تیمی متشکل از متخصصان گردشگری، طراحان وب و علاقه‌مندان به سفر، همواره در تلاشیم تا خدماتی نوآورانه ارائه کنیم و به شما کمک کنیم تا مقصد رویایی‌تان را راحت‌تر پیدا کنید.<br>
-      <b>ویژگی‌های سامانه ما:<br></b>
-      ●معرفی جاذبه‌های گردشگری تمام استان‌ها<br>
-      ●امکان فیلتر و جستجو بر اساس سلیقه شما<br>
-      ●رابط کاربری ساده و زیبا<br>
-      ●به‌روزرسانی مداوم اطلاعات و محتوا<br>
-      با ما همراه باشید تا ایران را بهتر بشناسید و سفرهای فراموش‌نشدنی‌تری داشته باشید.<br>
-    </p>
+    <p style="text-align: justify; font-size: 1.1rem; line-height: 2.2; font-family: 'IRANSans', sans-serif;">
+  <i class="fas fa-map-marked-alt text-primary ms-2"></i> 
+  <strong style="color: #ff5722;">سامانه گردشگری ما</strong> با هدف معرفی زیبایی‌ها، جاذبه‌های طبیعی، تاریخی و فرهنگی ایران راه‌اندازی شده است.  
+  ما تلاش می‌کنیم بستری <span style="color:#0077cc;">هوشمند، ساده و کاربردی</span> برای کاربران فراهم کنیم تا بتوانند اطلاعات کاملی از مقاصد گردشگری در سراسر کشور به‌دست آورند، سفرهای خود را بهتر برنامه‌ریزی کنند و تجربه‌ای <span style="color: #009688;">لذت‌بخش</span> از ایران‌گردی داشته باشند.
+  <br><br>
+  <i class="fas fa-users text-success ms-2"></i>
+  با تیمی متشکل از <span style="color:#6a1b9a;">متخصصان گردشگری</span>، طراحان وب و علاقه‌مندان به سفر، همواره در تلاشیم تا خدماتی <span style="color:#e91e63;">نوآورانه</span> ارائه کنیم و به شما کمک کنیم تا <strong style="color: #4caf50;">مقصد رویایی‌تان</strong> را راحت‌تر پیدا کنید.
+  <br><br><strong style="color: #ff5722;">ویژگی‌های سامانه ما:</strong><br>
+  <i class="fas fa-check-circle text-success ms-2"></i> معرفی جاذبه‌های گردشگری تمام استان‌ها<br>
+  <i class="fas fa-filter text-info ms-2"></i> امکان فیلتر و جستجو بر اساس سلیقه شما<br>
+  <i class="fas fa-desktop text-primary ms-2"></i> رابط کاربری ساده و زیبا<br>
+  <i class="fas fa-sync-alt text-warning ms-2"></i> به‌روزرسانی مداوم اطلاعات و محتوا<br>
+  <i class="fas fa-mobile-alt text-warning ms-2"></i> طراحی ریسپانسیو و حرفه‌ای برای موبایل و دسکتاپ<br>
+  <i class="fas fa-user-friends text-danger ms-2"></i> پشتیبانی و همراهی حرفه‌ای در مسیر سفر شما<br><br>
+
+  <i class="fas fa-heart text-danger ms-2"></i>
+  با ما همراه باشید تا ایران را بهتر بشناسید و <span style="color:#ff9800;">سفرهای فراموش‌نشدنی‌تری</span> داشته باشید.
+</p>
   </div>
 </div>
+<section class="faq-section">
+    <form id="faqForm">
+  <h3><i class="fas fa-question-circle fa-1.5x text-primary ms-2 hover-bounce"></i> سوال خود را از ما بپرسید</h3>
+
+  <div class="mb-3 text-end">
+    <label for="questionSubject" class="form-label">
+      <i class="fas fa-heading text-info ms-1"></i>
+      موضوع سوال
+    </label>
+    <input type="text" class="form-control" id="questionSubject" placeholder="مثلاً: آیا امکان همکاری با شما وجود دارد؟" required>
+  </div>
+
+  <div class="mb-3 text-end">
+    <label for="questionText" class="form-label">
+      <i class="fas fa-align-right text-info ms-1"></i>
+      متن سوال
+    </label>
+    <textarea class="form-control" id="questionText" rows="4" placeholder="لطفاً سوال خود را کامل بنویسید..." required></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-danger w-100" style="background: #0077cc">ارسال سوال</button>
+</form>
+
+    <div id="alertBox" class="alert alert-success mt-4 text-center d-none" role="alert">
+      سوال شما با موفقیت ارسال شد!
+    </div>
+  </section>
 
 
 <div class="footer-second">
@@ -91,6 +194,7 @@
   </div>
 </div>
 
+
 <footer>
   <p>لینک‌های مهم:</p>
   <a href="index.html">صفحه اصلی</a>
@@ -100,5 +204,20 @@
   <a href="about_us.html">درباره ما</a>
   <a href="contact_us.html">تماس با ما</a>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <script>
+    document.getElementById('faqForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const alertBox = document.getElementById('alertBox');
+      alertBox.classList.remove('d-none');
+      this.reset();
+      setTimeout(() => {
+        alertBox.classList.add('d-none');
+      }, 4000);
+    });
+  </script>
+
 </body>
 </html>
